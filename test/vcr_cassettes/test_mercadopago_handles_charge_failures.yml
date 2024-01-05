@@ -1,0 +1,134 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/card_<MERCADOPAGO_ACCESS_TOKEN>s
+    body:
+      encoding: UTF-8
+      string: '{"card_number":"503<VENDOR_ID>4332<VENDOR_ID>540635<VENDOR_ID>","e<VENDOR_AUTH_CODE>piration_year":2025,"e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"security_code":"<VENDOR_ID>23","payment_method_id":"visa","cardholder":{"name":"APRO"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - bf24566d-e4a0-4<VENDOR_ID>24-b<VENDOR_ID><VENDOR_ID>8-46b9564f4e4c
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID>57"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 08 Jan 2024 0<VENDOR_ID>:<VENDOR_ID>3:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Id:
+      - 3aeb78e<VENDOR_ID>-b293-4d<VENDOR_ID>2-9ff2-94b9ddd53a8<VENDOR_ID>
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Timing-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"id":"eeffe79<VENDOR_ID>2ec256b25c556<VENDOR_ID>f32ef2cfdf","first_si<VENDOR_AUTH_CODE>_digits":"503<VENDOR_ID>43","e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"e<VENDOR_AUTH_CODE>piration_year":2025,"last_four_digits":"635<VENDOR_ID>","cardholder":{"identification":{},"name":"APRO"},"status":"active","date_created":"2024-0<VENDOR_ID>-07T2<VENDOR_ID>:<VENDOR_ID>3:36.602-04:00","date_last_updated":"2024-0<VENDOR_ID>-07T2<VENDOR_ID>:<VENDOR_ID>3:36.602-04:00","date_due":"2024-0<VENDOR_ID>-<VENDOR_ID>5T2<VENDOR_ID>:<VENDOR_ID>3:36.602-04:00","luhn_validation":true,"live_mode":false,"require_esc":false,"card_number_length":<VENDOR_ID>6,"security_code_length":3}'
+  recorded_at: Mon, 08 Jan 2024 01:13:35 GMT
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/payments/
+    body:
+      encoding: UTF-8
+      string: '{"<MERCADOPAGO_ACCESS_TOKEN>":"eeffe79<VENDOR_ID>2ec256b25c556<VENDOR_ID>f32ef2cfdf","installments":<VENDOR_ID>,"transaction_amount":200000,"payer":{"type":"customer","id":"<VENDOR_ID>623739743-d<VENDOR_AUTH_CODE>r2lARGFjjlBo"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - 560<VENDOR_ID>6fc2-a4c3-4486-abfd-<VENDOR_ID>7ee0466f8c9
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID>50"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Mon, 08 Jan 2024 0<VENDOR_ID>:<VENDOR_ID>3:37 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Site-Id:
+      - MLM
+      X-Response-Status:
+      - approved/accredited
+      X-Caller-Id:
+      - 8077978<VENDOR_ID>
+      Vary:
+      - Accept,Accept-Encoding
+      Cache-Control:
+      - ma<VENDOR_AUTH_CODE>-age=0
+      Etag:
+      - 8c65c74beadb53c0d5bbcd7b22d<VENDOR_ID>7c6f
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - "<VENDOR_ID>f5<VENDOR_ID>fb47-5ae9-4552-bc6<VENDOR_ID>-50e6cd2ff4ba"
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Timing-Allow-Origin:
+      - "*"
+      Access-Control-Ma<VENDOR_AUTH_CODE>-Age:
+      - '86400'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"Invalid card_<MERCADOPAGO_ACCESS_TOKEN>_id","error":"bad_request","status":400,"cause":[{"code":3003,"description":"Invalid
+        card_<MERCADOPAGO_ACCESS_TOKEN>_id","data":"08-0<VENDOR_ID>-2024T0<VENDOR_ID>:08:09UTC;aa88e0ba-4f80-4087-8303-b463df3f6b50"}]}'
+  recorded_at: Mon, 08 Jan 2024 01:13:35 GMT
+recorded_with: VCR 6.2.0

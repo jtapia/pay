@@ -16,6 +16,12 @@ braintree:
   first_name: Braintree
   last_name: User
 
+# User with mercadopago payment processor
+mercadopago:
+  email: mercadopago@example.org
+  first_name: Mercadopago
+  last_name: User
+
 # User with paddle classic payment processor
 paddle_billing:
   email: paddle-billing@example.org

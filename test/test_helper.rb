@@ -21,8 +21,12 @@ ENV["PADDLE_BILLING_ENVIRONMENT"] ||= "sandbox"
 ENV["PADDLE_BILLING_SELLER_ID"] ||= "111"
 ENV["PADDLE_BILLING_API_KEY"] ||= "secret"
 
+ENV["MERCADOPAGO_PUBLIC_KEY"] ||= "x"
+ENV["MERCADOPAGO_ACCESS_TOKEN"] ||= "token"
+
 require "braintree"
 require "stripe"
+require "mercadopago"
 require "paddle"
 require "receipts"
 
@@ -35,6 +39,7 @@ require "mocha/minitest"
 
 require_relative "support/braintree"
 require_relative "support/stripe"
+require_relative "support/mercadopago"
 require_relative "support/vcr"
 
 # Uncomment to view the stacktrace for debugging tests
@@ -70,6 +75,10 @@ class ActiveSupport::TestCase
   def braintree_event(name)
     raw = fake_event "braintree/#{name}"
     Pay.braintree_gateway.webhook_notification.parse(raw["bt_signature"], raw["bt_payload"])
+  end
+
+  def mercadopago_event(name)
+    OpenStruct.new fake_event("mercadopago/#{name}").deep_merge(overrides)
   end
 
   def paddle_billing_event(name)

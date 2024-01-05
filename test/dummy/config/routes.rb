@@ -67,5 +67,24 @@ Rails.application.routes.draw do
     resource :checkout, namespace: :stripe
   end
 
+  namespace :mercadopago do
+    resource :payment_method, namespace: :mercadopago
+    resources :subscriptions do
+      member do
+        patch :cancel
+        patch :resume
+      end
+    end
+    resources :charges do
+      member do
+        patch :refund
+      end
+    end
+    namespace :charges do
+      resource :import
+    end
+    resource :checkout, namespace: :mercadopago
+  end
+
   root to: "main#show"
 end

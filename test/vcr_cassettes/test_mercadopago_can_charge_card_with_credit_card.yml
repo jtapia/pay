@@ -1,0 +1,133 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/card_<MERCADOPAGO_ACCESS_TOKEN>s
+    body:
+      encoding: UTF-8
+      string: '{"card_number":"503<VENDOR_ID>4332<VENDOR_ID>540635<VENDOR_ID>","e<VENDOR_AUTH_CODE>piration_year":2025,"e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"security_code":"<VENDOR_ID>23","cardholder":{"name":"APRO"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - ce2f<VENDOR_ID>2dc-5d8e-426d-bf09-f5<VENDOR_ID>39b224a74
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID>30"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 08 Jan 2024 00:03:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Id:
+      - b7cf462d-6460-474f-a444-96ec850b<VENDOR_ID>395
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Timing-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"id":"98608f9fd506bd<VENDOR_ID>8ebefef<VENDOR_ID>68763<VENDOR_ID>458","first_si<VENDOR_AUTH_CODE>_digits":"503<VENDOR_ID>43","e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"e<VENDOR_AUTH_CODE>piration_year":2025,"last_four_digits":"635<VENDOR_ID>","cardholder":{"identification":{},"name":"APRO"},"status":"active","date_created":"2024-0<VENDOR_ID>-07T20:03:35.409-04:00","date_last_updated":"2024-0<VENDOR_ID>-07T20:03:35.409-04:00","date_due":"2024-0<VENDOR_ID>-<VENDOR_ID>5T20:03:35.409-04:00","luhn_validation":true,"live_mode":false,"require_esc":false,"card_number_length":<VENDOR_ID>6,"security_code_length":3}'
+  recorded_at: Mon, 08 Jan 2024 00:03:35 GMT
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/payments/
+    body:
+      encoding: UTF-8
+      string: '{"<MERCADOPAGO_ACCESS_TOKEN>":"98608f9fd506bd<VENDOR_ID>8ebefef<VENDOR_ID>68763<VENDOR_ID>458","installments":<VENDOR_ID>,"transaction_amount":2900,"payer":{"type":"customer","id":"<VENDOR_ID>623739743-d<VENDOR_AUTH_CODE>r2lARGFjjlBo"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - "<VENDOR_ID>c53b<VENDOR_ID>05-9da9-457d-a834-aa3ed3bcfa58"
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID>48"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 08 Jan 2024 00:03:36 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Site-Id:
+      - MLM
+      X-Response-Status:
+      - approved/accredited
+      X-Caller-Id:
+      - 8077978<VENDOR_ID>
+      Vary:
+      - Accept,Accept-Encoding
+      Cache-Control:
+      - ma<VENDOR_AUTH_CODE>-age=0
+      Etag:
+      - 9540eb72<VENDOR_ID>9f3072e9<VENDOR_ID>afe08ebf3007f9
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 603da3b4-f6e5-48<VENDOR_ID>d-84a7-32be02f8945f
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Timing-Allow-Origin:
+      - "*"
+      Access-Control-Ma<VENDOR_AUTH_CODE>-Age:
+      - '86400'
+    body:
+      encoding: UTF-8
+      string: '{"id":<VENDOR_ID>3205263<VENDOR_ID>3,"date_created":"2024-0<VENDOR_ID>-07T20:03:36.548-04:00","date_approved":"2024-0<VENDOR_ID>-07T20:03:36.75<VENDOR_ID>-04:00","date_last_updated":"2024-0<VENDOR_ID>-07T20:03:36.75<VENDOR_ID>-04:00","date_of_e<VENDOR_AUTH_CODE>piration":null,"money_release_date":"2024-0<VENDOR_ID>-07T20:03:36.75<VENDOR_ID>-04:00","money_release_status":"released","operation_type":"regular_payment","issuer_id":"<VENDOR_ID>62","payment_method_id":"master","payment_type_id":"credit_card","payment_method":{"id":"master","type":"credit_card","issuer_id":"<VENDOR_ID>62","data":{"routing_data":{"merchant_account_id":"<VENDOR_ID>0299"}}},"status":"approved","status_detail":"accredited","currency_id":"MXN","description":null,"live_mode":false,"sponsor_id":null,"authorization_code":"229549003","money_release_schema":null,"ta<VENDOR_AUTH_CODE>es_amount":0,"counter_currency":null,"brand_id":null,"shipping_amount":0,"build_version":"3.32.<VENDOR_ID>","pos_id":null,"store_id":null,"integrator_id":null,"platform_id":null,"corporation_id":null,"payer":{"identification":{"number":"32659430","type":"DNI"},"entity_type":null,"phone":{"number":null,"e<VENDOR_AUTH_CODE>tension":null,"area_code":null},"last_name":null,"id":"<VENDOR_ID>623739743-d<VENDOR_AUTH_CODE>r2lARGFjjlBo","type":null,"first_name":null,"email":"test_user_80507629@testuser.com"},"collector_id":8077978<VENDOR_ID>,"marketplace_owner":null,"metadata":{},"additional_info":{"available_balance":null,"nsu_processadora":null,"authentication_code":null},"order":{},"e<VENDOR_AUTH_CODE>ternal_reference":null,"transaction_amount":2900,"transaction_amount_refunded":0,"coupon_amount":0,"differential_pricing_id":null,"financing_group":null,"deduction_schema":null,"installments":<VENDOR_ID>,"transaction_details":{"payment_method_reference_id":null,"acquirer_reference":null,"net_received_amount":2777.9<VENDOR_ID>,"total_paid_amount":2900,"overpaid_amount":0,"e<VENDOR_AUTH_CODE>ternal_resource_url":null,"installment_amount":2900,"financial_institution":null,"payable_deferral_period":null},"fee_details":[{"type":"mercadopago_fee","amount":<VENDOR_ID>22.09,"fee_payer":"collector"}],"charges_details":[{"id":"<VENDOR_ID>3205263<VENDOR_ID>3-00<VENDOR_ID>","name":"mercadopago_fee","type":"fee","accounts":{"from":"collector","to":"mp"},"client_id":0,"date_created":"2024-0<VENDOR_ID>-07T20:03:36.555-04:00","last_updated":"2024-0<VENDOR_ID>-07T20:03:36.555-04:00","amounts":{"original":<VENDOR_ID>22.09,"refunded":0},"metadata":{},"reserve_id":null,"refund_charges":[]}],"captured":true,"binary_mode":false,"call_for_authorize_id":null,"statement_descriptor":null,"card":{"id":null,"first_si<VENDOR_AUTH_CODE>_digits":"503<VENDOR_ID>43","last_four_digits":"635<VENDOR_ID>","e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"e<VENDOR_AUTH_CODE>piration_year":2025,"date_created":"2024-0<VENDOR_ID>-07T20:03:36.000-04:00","date_last_updated":"2024-0<VENDOR_ID>-07T20:03:36.000-04:00","cardholder":{"name":"APRO","identification":{"number":null,"type":null}}},"notification_url":null,"refunds":[],"processing_mode":"aggregator","merchant_account_id":null,"merchant_number":null,"acquirer_reconciliation":[],"point_of_interaction":{"type":"UNSPECIFIED","business_info":{"unit":"online_payments","sub_unit":"sdk","branch":null}},"accounts_info":null,"tags":null}'
+  recorded_at: Mon, 08 Jan 2024 00:03:36 GMT
+recorded_with: VCR 6.2.0

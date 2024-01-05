@@ -7,7 +7,7 @@ class Pay::Braintree::Charge::Test < ActiveSupport::TestCase
     @pay_customer.update(processor_id: nil)
   end
 
-  test "can partially refund a transaction" do
+  test "braintree can partially refund a transaction" do
     @pay_customer.payment_method_token = "fake-valid-visa-nonce"
 
     charge = @pay_customer.charge(29_00)
@@ -17,7 +17,7 @@ class Pay::Braintree::Charge::Test < ActiveSupport::TestCase
     assert_equal 10_00, charge.amount_refunded
   end
 
-  test "can fully refund a transaction" do
+  test "braintree can fully refund a transaction" do
     @pay_customer.payment_method_token = "fake-valid-visa-nonce"
 
     charge = @pay_customer.charge(37_00)

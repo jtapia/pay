@@ -28,6 +28,9 @@ braintree:
   public_key: yyyy
   merchant_id: aaaa
   environment: sandbox
+mercadopago:
+  public_key: xxxx
+  access_token: yyyy
 paddle_billing:
   client_token: aaaa
   api_key: yyyy
@@ -60,6 +63,8 @@ Pay will also check environment variables for API keys:
 * `BRAINTREE_PUBLIC_KEY`
 * `BRAINTREE_PRIVATE_KEY`
 * `BRAINTREE_ENVIRONMENT`
+* `MERADOPAGO_PUBLIC_KEY`
+* `MERADOPAGO_ACCESS_TOKEN`
 * `PADDLE_BILLING_API_KEY`
 * `PADDLE_BILLING_CLIENT_TOKEN`
 * `PADDLE_BILLING_SIGNING_SECRET`

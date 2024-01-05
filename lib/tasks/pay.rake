@@ -20,6 +20,9 @@ def sync_default_payment_method(pay_customer, retries: 2)
     when "stripe"
       payment_method_id = pay_customer.customer.invoice_settings.default_payment_method
       Pay::Stripe::PaymentMethod.sync(payment_method_id) if payment_method_id
+    when "mercadopago"
+      payment_method_id = pay_customer.customer.invoice_settings.default_payment_method
+      Pay::Mercadopago::PaymentMethod.sync(payment_method_id) if payment_method_id
     when "paddle_classic"
       Pay::PaddleClassic::PaymentMethod.sync(pay_customer: pay_customer)
     end

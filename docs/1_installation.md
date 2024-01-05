@@ -15,6 +15,9 @@ gem "stripe", "~> 10.0"
 # To use Braintree + PayPal, also include:
 gem "braintree", "~> 4.7"
 
+# To use Mercadopago, also include:
+gem "mercadopago-sdk", "~> 2.2"
+
 # To use Paddle Billing or Paddle Classic, also include:
 gem "paddle", "~> 2.1"
 

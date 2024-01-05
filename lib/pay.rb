@@ -20,6 +20,7 @@ module Pay
   autoload :PaddleBilling, "pay/paddle_billing"
   autoload :PaddleClassic, "pay/paddle_classic"
   autoload :Stripe, "pay/stripe"
+  autoload :Mercadopago, "pay/mercadopago"
 
   autoload :Webhooks, "pay/webhooks"
 
@@ -28,6 +29,7 @@ module Pay
   end
 
   mattr_accessor :braintree_gateway
+  mattr_accessor :mercadopago_gateway
 
   mattr_accessor :model_parent_class
   @@model_parent_class = "ApplicationRecord"
@@ -56,7 +58,7 @@ module Pay
   @@routes_path = "/pay"
 
   mattr_accessor :enabled_processors
-  @@enabled_processors = [:stripe, :braintree, :paddle_billing, :paddle_classic]
+  @@enabled_processors = [:stripe, :braintree, :mercadopago, :paddle_billing, :paddle_classic]
 
   mattr_accessor :send_emails
   @@send_emails = true

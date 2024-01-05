@@ -80,6 +80,13 @@ class Pay::AttributesTest < ActiveSupport::TestCase
     User.pay_braintree_customer_attributes = original_value
   end
 
+  test "pay_customer mercadopago attributes" do
+    original_value = User.pay_mercadopago_customer_attributes
+    User.pay_mercadopago_customer_attributes = :mercadopago_attributes
+    assert_equal :mercadopago_attributes, User.pay_mercadopago_customer_attributes
+    User.pay_mercadopago_customer_attributes = original_value
+  end
+
   test "default_payment_processor option" do
     original_value = User.pay_default_payment_processor
     User.pay_default_payment_processor = :fake_processor

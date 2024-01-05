@@ -17,3 +17,12 @@ braintree:
     payment_method_type: paypal
     brand: PayPal
     email: test@example.org
+
+mercadopago:
+  customer: mercadopago
+  processor_id: 1234
+  amount: 1500
+  data:
+    payment_method_type: mercadopago
+    brand: Mercadopago
+    email: test@example.org

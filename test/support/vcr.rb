@@ -13,12 +13,16 @@ unless ENV["SKIP_VCR"]
     c.filter_sensitive_data("<BRAINTREE_PRIVATE_KEY>") { Pay::Braintree.private_key }
     c.filter_sensitive_data("<PADDLE_PRIVATE_KEY>") { Pay::PaddleClassic.vendor_auth_code }
     c.filter_sensitive_data("<PADDLE_API_KEY>") { Pay::PaddleBilling.api_key }
+    c.filter_sensitive_data("<MERCADOPAGO_PUBLIC_KEY>") { Pay::Mercadopago.public_key }
+    c.filter_sensitive_data("<MERCADOPAGO_ACCESS_TOKEN>") { Pay::Mercadopago.access_token }
   end
 
   class ActiveSupport::TestCase
     setup do
       # Test filenames are case sensitive in CI
-      VCR.insert_cassette name, allow_unused_http_interactions: false, record_on_error: false
+      VCR.insert_cassette name,
+                          allow_unused_http_interactions: false,
+                          record_on_error: false
     end
 
     teardown do

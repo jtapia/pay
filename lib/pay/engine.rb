@@ -33,6 +33,7 @@ module Pay
     config.to_prepare do
       Pay::Stripe.setup if Pay::Stripe.enabled?
       Pay::Braintree.setup if Pay::Braintree.enabled?
+      Pay::Mercadopago.setup if Pay::Mercadopago.enabled?
       Pay::PaddleBilling.setup if Pay::PaddleBilling.enabled?
 
       if defined?(::Receipts::VERSION)

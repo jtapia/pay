@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/card_<MERCADOPAGO_ACCESS_TOKEN>s
+    body:
+      encoding: UTF-8
+      string: '{"card_number":"503<VENDOR_ID>4332<VENDOR_ID>540635<VENDOR_ID>","e<VENDOR_AUTH_CODE>piration_year":2025,"e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"security_code":"<VENDOR_ID>23","cardholder":{"name":"APRO"}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - 4574e895-53b5-49b5-a26c-85372<VENDOR_ID>cac93e
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID>30"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 05 Jan 2024 23:2<VENDOR_ID>:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Request-Id:
+      - b6639a02-9d8e-46b8-b<VENDOR_ID>22-<VENDOR_ID><VENDOR_ID>33d02d4095
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Timing-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: '{"id":"ee6db74bd<VENDOR_ID>0d63d<VENDOR_ID>4a2<VENDOR_ID>e0b3828d6d<VENDOR_ID>8","first_si<VENDOR_AUTH_CODE>_digits":"503<VENDOR_ID>43","e<VENDOR_AUTH_CODE>piration_month":<VENDOR_ID><VENDOR_ID>,"e<VENDOR_AUTH_CODE>piration_year":2025,"last_four_digits":"635<VENDOR_ID>","cardholder":{"identification":{},"name":"APRO"},"status":"active","date_created":"2024-0<VENDOR_ID>-05T<VENDOR_ID>9:2<VENDOR_ID>:53.262-04:00","date_last_updated":"2024-0<VENDOR_ID>-05T<VENDOR_ID>9:2<VENDOR_ID>:53.262-04:00","date_due":"2024-0<VENDOR_ID>-<VENDOR_ID>3T<VENDOR_ID>9:2<VENDOR_ID>:53.262-04:00","luhn_validation":true,"live_mode":false,"require_esc":false,"card_number_length":<VENDOR_ID>6,"security_code_length":3}'
+  recorded_at: Fri, 05 Jan 2024 23:21:52 GMT
+recorded_with: VCR 6.2.0

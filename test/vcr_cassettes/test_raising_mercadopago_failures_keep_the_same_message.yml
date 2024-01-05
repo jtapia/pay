@@ -1,0 +1,70 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mercadopago.com/v<VENDOR_ID>/payments/
+    body:
+      encoding: UTF-8
+      string: '{"<MERCADOPAGO_ACCESS_TOKEN>":"","installments":<VENDOR_ID>,"transaction_amount":0,"payment_method_id":null,"payer":{"type":"customer","id":null}}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - MercadoPago Ruby SDK v2.2.<VENDOR_ID>
+      Authorization:
+      - Bearer TEST-<VENDOR_ID>0<VENDOR_ID><VENDOR_ID>54492994844-0725<VENDOR_ID>4-3e3757<VENDOR_ID>8fe895<VENDOR_ID>a68880d0220726e27b-8077978<VENDOR_ID>
+      X-Product-Id:
+      - bc32a7vtrpp00<VENDOR_ID>u8nhjg
+      X-Tracking-Id:
+      - platform:3.2.2,type:SDK2.2.<VENDOR_ID>,so;
+      X-Idempotency-Key:
+      - 876e<VENDOR_ID>8<VENDOR_ID>a-98c6-4bbd-9528-<VENDOR_ID>5d0e9f7755e
+      Content-Type:
+      - application/json
+      Content-Length:
+      - "<VENDOR_ID><VENDOR_ID>5"
+      Accept-Encoding:
+      - gzip;q=<VENDOR_ID>.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mercadopago.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 05 Jan 2024 2<VENDOR_ID>:33:03 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Site-Id:
+      - MLM
+      Vary:
+      - accept-encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 29545b0f-5974-4bec-a25c-3<VENDOR_ID>e49cfdb85b
+      X-Xss-Protection:
+      - "<VENDOR_ID>; mode=block"
+      Strict-Transport-Security:
+      - ma<VENDOR_AUTH_CODE>-age=<VENDOR_ID>6070400; includeSubDomains; preload
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - Content-Type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, DELETE, OPTIONS
+      Timing-Allow-Origin:
+      - "*"
+      Access-Control-Ma<VENDOR_AUTH_CODE>-Age:
+      - '86400'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"transaction_amount must be positive","error":"bad_request","status":400,"cause":[{"code":4049,"description":"transaction_amount
+        must be positive","data":"05-0<VENDOR_ID>-2024T2<VENDOR_ID>:33:03UTC;29545b0f-5974-4bec-a25c-3<VENDOR_ID>e49cfdb85b"}]}'
+  recorded_at: Fri, 05 Jan 2024 21:33:02 GMT
+recorded_with: VCR 6.2.0

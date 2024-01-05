@@ -19,4 +19,8 @@ class User < ApplicationRecord
   def braintree_attributes(pay_customer)
     { company: "Company" }
   end
+
+  def mercadopago_attributes(pay_customer)
+    { }
+  end
 end

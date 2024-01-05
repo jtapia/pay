@@ -89,6 +89,18 @@ class Pay::Test < ActiveSupport::TestCase
     Pay.enabled_processors = original
   end
 
+  test "can enable and disable the mercadopago processor" do
+    original = Pay.enabled_processors
+
+    Pay.enabled_processors = []
+    refute Pay::Mercadopago.enabled?
+
+    Pay.enabled_processors = [:mercadopago]
+    assert Pay::Mercadopago.enabled?
+
+    Pay.enabled_processors = original
+  end
+
   test "can enable and disable the paddle billing processor" do
     original = Pay.enabled_processors
 

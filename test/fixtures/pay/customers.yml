@@ -12,6 +12,12 @@ braintree:
   processor_id: bt_1234
   default: true
 
+mercadopago:
+  owner: mercadopago (User)
+  processor: mercadopago
+  processor_id: bt_1234
+  default: true
+
 paddle_billing:
   owner: paddle_billing (User)
   processor: paddle_billing
